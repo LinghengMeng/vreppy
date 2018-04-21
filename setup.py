@@ -27,7 +27,6 @@ setup(
         'Programming Language :: Python :: 3.5',
         'Programming Language :: Python :: Implementation :: CPython'
     ],
-    data_files=[('scenes', ['/scenes/Pioneer.ttt', '/scenes/testAllComponents.ttt'])
-                ],
-    package_data={'vreppy': ['data/vrep/vrep.py']}
+
+    package_data={'vreppy': ['scenes/*.ttt']}
 )
