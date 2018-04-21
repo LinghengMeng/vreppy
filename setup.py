@@ -27,6 +27,6 @@ setup(
         'Programming Language :: Python :: 3.5',
         'Programming Language :: Python :: Implementation :: CPython'
     ],
-    package_dir={'vreppy': 'vreppy'},
+    package_dir={'vreppy': 'scenes'},
     package_data={'vreppy': ['scenes/*.ttt']}
 )
