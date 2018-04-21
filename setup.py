@@ -27,8 +27,9 @@ setup(
         'Programming Language :: Python :: 3.5',
         'Programming Language :: Python :: Implementation :: CPython'
     ],
-    data_files=[('scenes', ['scenes/Pioneer.ttt', 'scenes/testAllComponents.ttt']),
-                ('examples', ['examples/line_follower_pioneer.py']),
-                ('/examples',['examples/line_follower_pioneer.py'])
-                ]
+    data_files=[('scenes', ['/scenes/Pioneer.ttt', '/scenes/testAllComponents.ttt']),
+                ('examples', ['/examples/line_follower_pioneer.py']),
+                ('/examples',['/examples/line_follower_pioneer.py'])
+                ],
+      
 )
