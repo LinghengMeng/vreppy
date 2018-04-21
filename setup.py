@@ -5,7 +5,7 @@ setup(
     packages=['vreppy', 'vreppy.vrep'],
     version='1.0.0',
     description='Simple python binding for V-REP robotics simulator',
-    url='https://github.com/LinghengMeng/pyrep',
+    url='https://github.com/LinghengMeng/vreppy',
     author='Lingheng Meng',
     author_email='linghengmeng@yahoo.com',
     license='MIT',
@@ -27,6 +27,5 @@ setup(
         'Programming Language :: Python :: 3.5',
         'Programming Language :: Python :: Implementation :: CPython'
     ],
-    package_dir={'vreppy': 'scenes'},
-    package_data={'vreppy': ['*.ttt']}
+    data_files=[('scenes', ['testAllComponents.ttt'])]
 )
