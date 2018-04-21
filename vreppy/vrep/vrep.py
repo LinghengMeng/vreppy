@@ -35,7 +35,7 @@ from .vrepConst import *
 
 #load library
 libsimx = None
-library_dir = "./lib/"
+library_dir = "/lib/"
 # load library according to operating system
 if not os.path.exists(library_dir):
     raise OSError("V-Rep library directory {} does not exist!".format(library_dir))
