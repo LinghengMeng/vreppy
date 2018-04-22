@@ -21,13 +21,13 @@ pip install git+https://github.com/LinghengMeng/vreppy
 * `VREP_LIBRARy = 'C:\Program Files\V-REP3\V-REP_PRO_EDU\programming\remoteApiBindings\lib\lib\Windows\64Bit\'` 
    (V-Rep *remoteApi* library depending on you OS) 
 
-3. To test whether you set up environemtn variables currently, you can test with commands:</br>
-   `import os`</br>
+3. To test whether you set up environemtn variables currently, you can test with commands: </br>
+   `import os`</br>
    `os.environ['VREP']`</br>
    `os.environ['VREP_LIBRARY']`</br>
-   (If you are working with Anaconda on Mac OS and the VREP and VREP_LIBRARY are different from your setting, you can try to open spyder from terminal `spyder --new-instance`.)
+   (If you are working with Anaconda on Mac OS and the VREP and VREP_LIBRARY are different from your setting, you can try to open spyder from terminal: `spyder --new-instance`.)
   
-## Test your environment
+## Test your **vreppy**
 1. Open scene: `vrep -> File -> open scene -> scenes\testAllComponents.ttt`
 2. Run: `examples\testallcomponent.py`
 3. The socket port number used in `examples\testallcomponent.py` can be found in `remoteApiConnections.txt` under your installation path of V-Rep.
