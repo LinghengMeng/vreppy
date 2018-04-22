@@ -33,5 +33,4 @@ setup(
                                                                 'scenes/Pioneer.ttt',
                                                                 'scenes/LineFollowerPioneer.ttt']),
                 ('lib/python3.5/site-packages/vreppy/lib/',[os.path.join('lib','remoteApi.dylib')])],
-    include_package_data = True,
 )
