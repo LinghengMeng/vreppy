@@ -27,5 +27,5 @@ setup(
         'Programming Language :: Python :: 3.5',
         'Programming Language :: Python :: Implementation :: CPython'
     ],
-    data_files=[('lib/python3.5/site-packages/vreppy', ['scenes/testAllComponents.ttt','scenes/Pioneer.ttt'])]
+    data_files=[('lib/python3.5/site-packages/vreppy/', ['scenes/testAllComponents.ttt','scenes/Pioneer.ttt'])]
 )
