@@ -18,7 +18,8 @@ pip install git+https://github.com/LinghengMeng/vreppy
 
    * `VREP = 'C:\Program Files\V-REP3\V-REP_PRO_EDU\'`(Your V-Rep installation path)
    
-   * `VREP_LIBRARy = 'C:\Program Files\V-REP3\V-REP_PRO_EDU\programming\remoteApiBindings\lib\lib\Mac\'` (Your V-Rep remoteApi library depending on you platform) 
+   * `VREP_LIBRARy = 'C:\Program Files\V-REP3\V-REP_PRO_EDU\programming\remoteApiBindings\lib\lib\Mac\'` 
+   (Your V-Rep remoteApi library depending on you platform) 
   
 ## Test your environment
 1. Open scene: `vrep -> File -> open scene -> testAllComponents.ttt`
