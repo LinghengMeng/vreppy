@@ -35,19 +35,23 @@ from .vrepConst import *
 
 #load library
 libsimx = None
-library_dir = "/lib/"
+if 'VREP_LIBRARY' in os.environ and os.path.exists(os.environ['VREP_LIBRARY']):
+    library_dir = os.environ['VREP_LIBRARY']
+else:
+    print('Please set up VREP_LIBRARY!')
+
 # load library according to operating system
 if not os.path.exists(library_dir):
     raise OSError("V-Rep library directory {} does not exist!".format(library_dir))
 try:
     if platform.system() =='cli':
-        libsimx = ct.CDLL(library_dir + "/Windows/64Bit/remoteApi.dll")
+        libsimx = ct.CDLL(library_dir + "remoteApi.dll")
     elif platform.system() =='Windows':
-        libsimx = ct.CDLL(library_dir + "/Windows/64Bit/remoteApi.dll")
+        libsimx = ct.CDLL(library_dir + "remoteApi.dll")
     elif platform.system() == 'Darwin':
-        libsimx = ct.CDLL(library_dir + "/Mac/remoteApi.dylib")
+        libsimx = ct.CDLL(library_dir + "remoteApi.dylib")
     else:
-        libsimx = ct.CDLL(library_dir + "/Linux/64Bit/remoteApi.so")
+        libsimx = ct.CDLL(library_dir + "remoteApi.so")
 except:
     print ('----------------------------------------------------')
     print ('The remoteApi library could not be loaded. Make sure')
