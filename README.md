@@ -1,4 +1,4 @@
-# vreppy:v-rep python
+# vreppy: v-rep python
 
 **vreppy** is a python package intended to facilitate fast and convinent communication with 
 [Coppelia Robotics V-REP simulator](http://www.coppeliarobotics.com/). This package is based on [reppy](https://github.com/Troxid/vrep-api-python) developed by Troxid. 
