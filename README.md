@@ -7,18 +7,8 @@
 
 Install library directly from github by entering this command (If you haven't installed git, please install [git](https://gitforwindows.org/) first):
 
-#### For **Mac OS**:
-```bash
-pip install 'git+https://github.com/LinghengMeng/vreppy'
-```
-#### For **Windows**:
 ```bash
 pip install git+https://github.com/LinghengMeng/vreppy
-```
-
-#### For **Linux**:
-```bash
-pip install 'git+https://github.com/LinghengMeng/vreppy'
 ```
 
 ## V-Rep specific
