@@ -1,6 +1,14 @@
 from setuptools import setup
 import os.path
 
+def gen_data_files(*dirs):
+    results = []
+
+    for src_dir in dirs:
+        for root,dirs,files in os.walk(src_dir):
+            results.append((root, map(lambda f:root + "/" + f, files)))
+    return results
+
 setup(
     name='vreppy',
     packages=['vreppy', 'vreppy.vrep'],
@@ -29,8 +37,9 @@ setup(
         'Programming Language :: Python :: Implementation :: CPython'
     ],
     
-    data_files=[('lib/python3.5/site-packages/vreppy/scenes/', ['scenes/testAllComponents.ttt',
-                                                                'scenes/Pioneer.ttt',
-                                                                'scenes/LineFollowerPioneer.ttt']),
-                ('lib/python3.5/site-packages/vreppy/vrep/',['/vreppy/vrep/remoteApi.dylib']),],
+#    data_files=[('lib/python3.5/site-packages/vreppy/scenes/', ['scenes/testAllComponents.ttt',
+#                                                                'scenes/Pioneer.ttt',
+#                                                                'scenes/LineFollowerPioneer.ttt']),
+#                ('lib/python3.5/site-packages/vreppy/vrep/',['/vreppy/vrep/remoteApi.dylib']),],
+    data_files = gen_data_files("scenes")
 )
