@@ -27,6 +27,7 @@ setup(
         'Programming Language :: Python :: 3.5',
         'Programming Language :: Python :: Implementation :: CPython'
     ],
+    include_package_data = True,
     data_files=[('lib/python3.5/site-packages/vreppy/scenes/', ['scenes/testAllComponents.ttt',
                                                                 'scenes/Pioneer.ttt',
                                                                 'scenes/LineFollowerPioneer.ttt']),
