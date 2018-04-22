@@ -5,8 +5,7 @@
 
 ## Getting started
 
-0. Requirements: CPython version >= 3.5.2, pip
-1. Install library directly from github by entering this command (If you haven't installed git, please install [git](https://gitforwindows.org/) first):
+Install library directly from github by entering this command (If you haven't installed git, please install [git](https://gitforwindows.org/) first):
 
 For **Mac OS**:
 ```bash
