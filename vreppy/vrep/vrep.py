@@ -45,9 +45,9 @@ if not os.path.exists(library_dir):
     raise OSError("V-Rep library directory {} does not exist!".format(library_dir))
 try:
     if platform.system() =='cli':
-        libsimx = ct.CDLL(library_dir + "remoteApi.dll")
+        libsimx = ct.CDLL(library_dir + "\remoteApi.dll")
     elif platform.system() =='Windows':
-        libsimx = ct.CDLL(library_dir + "remoteApi.dll")
+        libsimx = ct.CDLL(library_dir + "\remoteApi.dll")
     elif platform.system() == 'Darwin':
         libsimx = ct.CDLL(library_dir + "remoteApi.dylib")
     else:
