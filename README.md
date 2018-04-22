@@ -14,7 +14,7 @@ pip install git+https://github.com/LinghengMeng/vreppy
 ## V-Rep specific
 1. Download and install [**V-Rep**](http://www.coppeliarobotics.com/downloads.html).
 
-2. Set up environment variable for **vreppy**:
+2. Set up environment variables for **vreppy** according to your installation path and operating system:
 
    * VREP = 'C:\Program Files\V-REP3\V-REP_PRO_EDU\'(Your V-Rep installation path)
    
