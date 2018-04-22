@@ -1,22 +1,30 @@
 # vreppy:v-rep python
 
-Simple python binding for
-[Coppelia Robotics V-REP simulator](http://www.coppeliarobotics.com/) ([remote API](http://www.coppeliarobotics.com/helpFiles/en/remoteApiOverview.htm)) of version 3.3.0
+**vreppy** is a python package intended to facilitate fast and convinent communication with 
+[Coppelia Robotics V-REP simulator](http://www.coppeliarobotics.com/). This package is based on [reppy](https://github.com/Troxid/vrep-api-python) developed by Troxid. 
 
 ## Getting started
 
-0. Requirements: CPython version >= 3.5.2, pip
-1. Install library from PyPI by entering this command:
+Install library directly from github by entering this command (If you haven't installed git, please install [git](https://gitforwindows.org/) first):
+
 ```bash
-[sudo] pip install 'git+https://github.com/LinghengMeng/vreppy'
+pip install git+https://github.com/LinghengMeng/vreppy
 ```
 
 ## V-Rep specific
-Package needs platform-specific native library (remoteApi). It uses two enviroment variables `VREP` and `VREP_LIBRARY`. If `VREP` is unspecified package will use default `/usr/share/vrep` for it. If `VREP_LIBRARY` is also unspecified, then it will concatenate `VREP` with `programming/remoteApiBindings/lib/lib/64Bit/`. This setup was test tested under **LINUX ONLY**. We are open for debug under Windows.
-    * For windows users:
-        *NOT TESTED*
-    
-To use package you will need the socket port number, which can be located in `V-REP/remoteApiConnections.txt`.
+1. Download and install [**V-Rep**](http://www.coppeliarobotics.com/downloads.html).
+
+2. Set up environment variables for **vreppy** according to your installation path and operating system:
+
+* `VREP = 'C:\Program Files\V-REP3\V-REP_PRO_EDU\'` (V-Rep installation path)
+   
+* `VREP_LIBRARy = 'C:\Program Files\V-REP3\V-REP_PRO_EDU\programming\remoteApiBindings\lib\lib\Windows\64Bit\'` 
+   (V-Rep *remoteApi* library depending on you OS) 
+  
+## Test your environment
+1. Open scene: `vrep -> File -> open scene -> scenes\testAllComponents.ttt`
+2. Run: `examples\testallcomponent.py`
+3. The socket port number used in `examples\testallcomponent.py` can be found in `remoteApiConnections.txt` under your installation path of V-Rep.
 
 ## Currently implemented things
 
