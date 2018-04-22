@@ -41,69 +41,61 @@ Basically implemented those components that are required to control the robot:
 ## Example
 Designed to be used with `examples/Pioneer.ttt`.
 ```python
-from pyrep import VRep
 import time
+from vreppy import VRep
+from math import *
+# contextlib
+# simpy
+# multiprocessing cpu
 
-class PioneerP3DX:
 
-    def __init__(self, api: VRep):
-        self._api = api
-        self._left_motor = api.joint.with_velocity_control("Pioneer_p3dx_leftMotor")
-        self._right_motor = api.joint.with_velocity_control("Pioneer_p3dx_rightMotor")
-        self._left_sensor = api.sensor.proximity("Pioneer_p3dx_ultrasonicSensor3")
-        self._right_sensor = api.sensor.proximity("Pioneer_p3dx_ultrasonicSensor6")
+with VRep.connect("127.0.0.1", 19997) as vrep:
+#    vrep.simulation.stop()
+#    time.sleep(2)
+#vrep.simulation.start()
 
-    def rotate_right(self, speed=2.0):
-        self._set_two_motor(speed, -speed)
+    j_vel = vrep.joint.with_velocity_control("joint_force")
+    j_pos = vrep.joint.with_position_control("joint_position")
+    j_pas = vrep.joint.passive("joint_passive")
+    j_sph = vrep.joint.spherical("sp_joint")
+    j_spr = vrep.joint.spring("joint_spring")
+    prox_sensor = vrep.sensor.proximity("Proximity_sensor")
 
-    def rotate_left(self, speed=2.0):
-        self._set_two_motor(-speed, speed)
+    s = vrep.sensor.proximity("sensor")
+    v = vrep.sensor.vision("vision")
 
-    def move_forward(self, speed=2.0):
-        self._set_two_motor(speed, speed)
-
-    def move_backward(self, speed=2.0):
-        self._set_two_motor(-speed, -speed)
-
-    def _set_two_motor(self, left: float, right: float):
-        self._left_motor.set_target_velocity(left)
-        self._right_motor.set_target_velocity(right)
-
-    def right_length(self):
-        return self._right_sensor.read()[1].distance()
-
-    def left_length(self):
-        return self._left_sensor.read()[1].distance()
-
-with VRep.connect("127.0.0.1", 19997) as api:
-    r = PioneerP3DX(api)
-    while True:
-        rl = r.right_length()
-        ll = r.left_length()
-        if rl > 0.01 and rl < 10:
-            r.rotate_left()
-        elif ll > 0.01 and ll < 10:
-            r.rotate_right()
-        else:
-            r.move_forward()
+    j_vel.set_target_velocity(1)
+    j_spr.set_target_position(2)
+    
+    print("Control joint_position...")
+    for i in range(5):
+        b = pi / 9
+        j_pos.set_target_position(b * i + 0.2)
+        time.sleep(1)
+        
+    print("Control joint_passive...")
+    for i in range(50):
+        v = sin(i / 10)
+        j_pas.set_position(v)
         time.sleep(0.1)
 
+    print("Control sp_joint...")
+    for i in range(1000):
+        v = sin(i / 100) * (i / 1000)
+        j_sph.set_matrix(
+            [0, 0, 0, 0,
+             0, 0, 0, 0,
+             v, 0, 0, 0])
+        time.sleep(0.01)
+    
+    print("Read Proximity Sensor...")
+    while True:
+        state, position = prox_sensor.read()
+        if position.get_x() != 0:
+            print("Detect something!")
+        else:
+            print("Nothing!")
+        #print("position:{}".format(position.distance()))
+
+#vrep.simulation.stop()
 ```
-
-
-## License
-Copyright (C) 2016-2017  Stanislav Eprikov, Pavel Pletenev 
-
-This program is free software; you can redistribute it and/or modify
-it under the terms of the GNU General Public License as published by
-the Free Software Foundation; either version 2 of the License, or
-(at your option) any later version.
-
-This program is distributed in the hope that it will be useful,
-but WITHOUT ANY WARRANTY; without even the implied warranty of
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-GNU General Public License for more details.
-
-You should have received a copy of the GNU General Public License along
-with this program; if not, write to the Free Software Foundation, Inc.,
-51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
