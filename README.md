@@ -24,8 +24,7 @@ pip install git+https://github.com/LinghengMeng/vreppy
 ## Test your environment
 1. Open scene: `vrep -> File -> open scene -> scenes\testAllComponents.ttt`
 2. Run: `examples\testallcomponent.py`
-
-To use package you will need the socket port number, which can be located in `V-REP/remoteApiConnections.txt`.
+3. The socket port number used in `examples\testallcomponent.py` can be found in `remoteApiConnections.txt` under your installation path of V-Rep.
 
 ## Currently implemented things
 
