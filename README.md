@@ -16,9 +16,9 @@ pip install git+https://github.com/LinghengMeng/vreppy
 
 2. Set up environment variables for **vreppy** according to your installation path and operating system:
 
-   * `VREP = 'C:\Program Files\V-REP3\V-REP_PRO_EDU\'`(Your V-Rep installation path)
+* `VREP = 'C:\Program Files\V-REP3\V-REP_PRO_EDU\'`<br/>(Your V-Rep installation path)
    
-   * `VREP_LIBRARy = 'C:\Program Files\V-REP3\V-REP_PRO_EDU\programming\remoteApiBindings\lib\lib\Windows\64Bit\'`<br/> 
+* `VREP_LIBRARy = 'C:\Program Files\V-REP3\V-REP_PRO_EDU\programming\remoteApiBindings\lib\lib\Windows\64Bit\'`<br/> 
    (Your V-Rep remoteApi library depending on you platform) 
   
 ## Test your environment
