@@ -4,21 +4,23 @@
 [Coppelia Robotics V-REP simulator](http://www.coppeliarobotics.com/). This package is based on [reppy](https://github.com/Troxid/vrep-api-python) developed by Troxid. 
 
 ## Getting started
-For Mac OS:
+For **Mac OS**:
 0. Requirements: CPython version >= 3.5.2, pip
 1. Install library from PyPI by entering this command:
 ```bash
 [sudo] pip install 'git+https://github.com/LinghengMeng/vreppy'
 ```
-For Windows:
+For **Windows**:
 ```bash
 pip install git+https://github.com/LinghengMeng/vreppy
 ```
-
-For Linux:
+If you haven't installed git, please install [git](https://gitforwindows.org/) first.
+For **Linux**:
 ```bash
 [sudo] pip install 'git+https://github.com/LinghengMeng/vreppy'
 ```
+
+
 
 ## V-Rep specific
 Package needs platform-specific native library (remoteApi). It uses two enviroment variables `VREP` and `VREP_LIBRARY`. If `VREP` is unspecified package will use default `/usr/share/vrep` for it. If `VREP_LIBRARY` is also unspecified, then it will concatenate `VREP` with `programming/remoteApiBindings/lib/lib/64Bit/`. This setup was test tested under **LINUX ONLY**. We are open for debug under Windows.
