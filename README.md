@@ -7,16 +7,16 @@
 
 Install library directly from github by entering this command (If you haven't installed git, please install [git](https://gitforwindows.org/) first):
 
-For **Mac OS**:
+### For **Mac OS**:
 ```bash
 [sudo] pip install 'git+https://github.com/LinghengMeng/vreppy'
 ```
-For **Windows**:
+### For **Windows**:
 ```bash
 pip install git+https://github.com/LinghengMeng/vreppy
 ```
 
-For **Linux**:
+### For **Linux**:
 ```bash
 [sudo] pip install 'git+https://github.com/LinghengMeng/vreppy'
 ```
