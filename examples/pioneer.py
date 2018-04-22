@@ -1,4 +1,4 @@
-from pyrep import VRep
+from vreppy import VRep
 import time
 
 
