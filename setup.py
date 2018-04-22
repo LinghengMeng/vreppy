@@ -1,4 +1,5 @@
 from setuptools import setup
+import os.path
 
 setup(
     name='vreppy',
@@ -31,5 +32,5 @@ setup(
     data_files=[('lib/python3.5/site-packages/vreppy/scenes/', ['scenes/testAllComponents.ttt',
                                                                 'scenes/Pioneer.ttt',
                                                                 'scenes/LineFollowerPioneer.ttt']),
-                ('lib/python3.5/site-packages/vreppy/lib/',['lib/remoteApi.dylib'])]
+                ('lib/python3.5/site-packages/vreppy/lib/',[os.path.join('lib','remoteApi.dylib')])]
 )
