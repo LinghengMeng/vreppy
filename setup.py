@@ -27,5 +27,5 @@ setup(
         'Programming Language :: Python :: 3.5',
         'Programming Language :: Python :: Implementation :: CPython'
     ],
-    data_files=[('aaa/', ['scenes/testAllComponents.ttt','scenes/Pioneer.ttt'])]
+    data_files=[('aaa/lingheng/', ['scenes/testAllComponents.ttt','scenes/Pioneer.ttt'])]
 )
