@@ -27,9 +27,13 @@ For **Linux**:
 
 2. Set up environment variable for **vreppy**:
 
-   VREP = "Your V-Rep installation path" e.g. VREP = 'C:\Program Files\V-REP3\V-REP_PRO_EDU'
+   VREP = "Your V-Rep installation path" e.g. 
    
-   VREP_LIbrary = "Your V-Rep remoteApi library" e.g. VREP_LIBRARy = 'C:\Program Files\V-REP3\V-REP_PRO_EDU\programming\remoteApiBindings\lib\lib\Windows\64Bit'
+   VREP = 'C:\Program Files\V-REP3\V-REP_PRO_EDU'
+   
+   VREP_LIbrary = "Your V-Rep remoteApi library" e.g. 
+   
+   VREP_LIBRARy = 'C:\Program Files\V-REP3\V-REP_PRO_EDU\programming\remoteApiBindings\lib\lib\Windows\64Bit'
   
 ## Test your environment
 1. import vreppy
