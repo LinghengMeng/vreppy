@@ -25,11 +25,6 @@ pip install git+https://github.com/LinghengMeng/vreppy
 1. Open scene: `vrep -> File -> open scene -> scenes\testAllComponents.ttt`
 2. Run: `examples\testallcomponent.py`
 
-  
-Package needs platform-specific native library (remoteApi). It uses two enviroment variables `VREP` and `VREP_LIBRARY`. If `VREP` is unspecified package will use default `/usr/share/vrep` for it. If `VREP_LIBRARY` is also unspecified, then it will concatenate `VREP` with `programming/remoteApiBindings/lib/lib/64Bit/`. This setup was test tested under **LINUX ONLY**. We are open for debug under Windows.
-    * For windows users:
-        *NOT TESTED*
-
 To use package you will need the socket port number, which can be located in `V-REP/remoteApiConnections.txt`.
 
 ## Currently implemented things
