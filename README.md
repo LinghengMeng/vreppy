@@ -17,19 +17,28 @@ For **Windows**:
 pip install git+https://github.com/LinghengMeng/vreppy
 ```
 
-
 For **Linux**:
 ```bash
 [sudo] pip install 'git+https://github.com/LinghengMeng/vreppy'
 ```
 
-
-
 ## V-Rep specific
+1. Download and install [**V-Rep**](http://www.coppeliarobotics.com/downloads.html).
+
+2. Set up environment variable for **vreppy**:
+
+   VREP = 
+   VREP_LIbrary = 
+  
+## Test your environment
+1. import vreppy
+
+
+  
 Package needs platform-specific native library (remoteApi). It uses two enviroment variables `VREP` and `VREP_LIBRARY`. If `VREP` is unspecified package will use default `/usr/share/vrep` for it. If `VREP_LIBRARY` is also unspecified, then it will concatenate `VREP` with `programming/remoteApiBindings/lib/lib/64Bit/`. This setup was test tested under **LINUX ONLY**. We are open for debug under Windows.
     * For windows users:
         *NOT TESTED*
-    
+
 To use package you will need the socket port number, which can be located in `V-REP/remoteApiConnections.txt`.
 
 ## Currently implemented things
