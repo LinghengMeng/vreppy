@@ -19,12 +19,11 @@ pip install git+https://github.com/LinghengMeng/vreppy
 * `VREP = 'C:\Program Files\V-REP3\V-REP_PRO_EDU\'` (V-Rep installation path)
    
 * `VREP_LIBRARy = 'C:\Program Files\V-REP3\V-REP_PRO_EDU\programming\remoteApiBindings\lib\lib\Windows\64Bit\'` 
-   (V-Rep remoteApi library depending on you OS) 
+   (V-Rep *remoteApi library depending on you OS) 
   
 ## Test your environment
-1. Open scene: `vrep -> File -> open scene -> testAllComponents.ttt`
-2. 
-
+1. Open scene: `vrep -> File -> open scene -> scenes\testAllComponents.ttt`
+2. Run: `examples\testallcomponent.py`
 
   
 Package needs platform-specific native library (remoteApi). It uses two enviroment variables `VREP` and `VREP_LIBRARY`. If `VREP` is unspecified package will use default `/usr/share/vrep` for it. If `VREP_LIBRARY` is also unspecified, then it will concatenate `VREP` with `programming/remoteApiBindings/lib/lib/64Bit/`. This setup was test tested under **LINUX ONLY**. We are open for debug under Windows.
