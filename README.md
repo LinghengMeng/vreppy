@@ -38,8 +38,8 @@ Basically implemented those components that are required to control the robot:
 * Position sensor (used for that dummy or shape object)
 * ~~Remote function calls~~
 
-## Example
-Designed to be used with `examples/Pioneer.ttt`.
+## Example testallcomponent.py
+Designed to be used with `examples/testallcomponent.ttt`.
 ```python
 import time
 from vreppy import VRep
