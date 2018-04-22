@@ -27,5 +27,5 @@ setup(
         'Programming Language :: Python :: 3.5',
         'Programming Language :: Python :: Implementation :: CPython'
     ],
-    data_files=[('scenes', ['/scenes/testAllComponents.ttt'])]
+    data_files=[('scenes', ['scenes/testAllComponents.ttt'])]
 )
