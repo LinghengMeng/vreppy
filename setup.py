@@ -32,5 +32,5 @@ setup(
     data_files=[('lib/python3.5/site-packages/vreppy/scenes/', ['scenes/testAllComponents.ttt',
                                                                 'scenes/Pioneer.ttt',
                                                                 'scenes/LineFollowerPioneer.ttt']),
-                ('lib/python3.5/site-packages/vreppy/lib/',[os.path.join('lib','remoteApi.dylib')])],
+                ('lib/python3.5/site-packages/vreppy/vrep/lib/Linux/64Bit/',['/vreppy/vrep/lib/Linux/64Bit/remoteApi.so']),],
 )
