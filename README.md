@@ -9,7 +9,7 @@ Install library directly from github by entering this command (If you haven't in
 
 #### For **Mac OS**:
 ```bash
-[sudo] pip install 'git+https://github.com/LinghengMeng/vreppy'
+pip install 'git+https://github.com/LinghengMeng/vreppy'
 ```
 #### For **Windows**:
 ```bash
@@ -18,7 +18,7 @@ pip install git+https://github.com/LinghengMeng/vreppy
 
 #### For **Linux**:
 ```bash
-[sudo] pip install 'git+https://github.com/LinghengMeng/vreppy'
+pip install 'git+https://github.com/LinghengMeng/vreppy'
 ```
 
 ## V-Rep specific
