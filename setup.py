@@ -35,11 +35,5 @@ setup(
         'Programming Language :: Python :: 3 :: Only',
         'Programming Language :: Python :: 3.5',
         'Programming Language :: Python :: Implementation :: CPython'
-    ],
-    
-#    data_files=[('lib/python3.5/site-packages/vreppy/scenes/', ['scenes/testAllComponents.ttt',
-#                                                                'scenes/Pioneer.ttt',
-#                                                                'scenes/LineFollowerPioneer.ttt']),
-#                ('lib/python3.5/site-packages/vreppy/vrep/',['/vreppy/vrep/remoteApi.dylib']),],
-    data_files = gen_data_files("scenes")
+    ]
 )
