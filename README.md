@@ -1,7 +1,7 @@
 # vreppy:v-rep python
 
-Simple python binding for
-[Coppelia Robotics V-REP simulator](http://www.coppeliarobotics.com/) ([remote API](http://www.coppeliarobotics.com/helpFiles/en/remoteApiOverview.htm)) of version 3.3.0
+vreppy is a python package intended to facilitate fast and convinent communication with 
+[Coppelia Robotics V-REP simulator](http://www.coppeliarobotics.com/). This package is based on [reppy](https://github.com/Troxid/vrep-api-python) developed by Troxid. 
 
 ## Getting started
 
