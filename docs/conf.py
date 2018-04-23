@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 #
 # vreppy documentation build configuration file, created by
-# sphinx-quickstart on Sun Apr 22 19:11:00 2018.
+# sphinx-quickstart on Sun Apr 22 20:30:09 2018.
 #
 # This file is execfile()d with the current directory set to its
 # containing dir.
@@ -31,7 +31,15 @@
 # Add any Sphinx extension module names here, as strings. They can be
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
-extensions = []
+extensions = ['sphinx.ext.autodoc',
+    'sphinx.ext.doctest',
+    'sphinx.ext.intersphinx',
+    'sphinx.ext.todo',
+    'sphinx.ext.coverage',
+    'sphinx.ext.mathjax',
+    'sphinx.ext.ifconfig',
+    'sphinx.ext.viewcode',
+    'sphinx.ext.githubpages']
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
@@ -47,8 +55,8 @@ master_doc = 'index'
 
 # General information about the project.
 project = 'vreppy'
-copyright = '2018, Lingheng Meng'
-author = 'Lingheng Meng'
+copyright = '2018, Lingheng Meng & Daiwei Lin'
+author = 'Lingheng Meng & Daiwei Lin'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
@@ -69,13 +77,13 @@ language = None
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
 # This patterns also effect to html_static_path and html_extra_path
-exclude_patterns = []
+exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
 
 # The name of the Pygments (syntax highlighting) style to use.
 pygments_style = 'sphinx'
 
 # If true, `todo` and `todoList` produce output, else they produce nothing.
-todo_include_todos = False
+todo_include_todos = True
 
 
 # -- Options for HTML output ----------------------------------------------
@@ -143,7 +151,7 @@ latex_elements = {
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
     (master_doc, 'vreppy.tex', 'vreppy Documentation',
-     'Lingheng Meng', 'manual'),
+     'Lingheng Meng \\& Daiwei Lin', 'manual'),
 ]
 
 
@@ -170,3 +178,27 @@ texinfo_documents = [
 
 
 
+# -- Options for Epub output ----------------------------------------------
+
+# Bibliographic Dublin Core info.
+epub_title = project
+epub_author = author
+epub_publisher = author
+epub_copyright = copyright
+
+# The unique identifier of the text. This can be a ISBN number
+# or the project homepage.
+#
+# epub_identifier = ''
+
+# A unique identification for the text.
+#
+# epub_uid = ''
+
+# A list of files that should not be packed into the epub file.
+epub_exclude_files = ['search.html']
+
+
+
+# Example configuration for intersphinx: refer to the Python standard library.
+intersphinx_mapping = {'https://docs.python.org/': None}
