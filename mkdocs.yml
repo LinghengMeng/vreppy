@@ -1,0 +1,5 @@
+site_name: vreppy
+pages:
+  - Home: index.md
+  - About: about.md
+theme: readthedocs
