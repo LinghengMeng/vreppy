@@ -1,5 +1,5 @@
 
-VRepApi class
+classes
 ==================================
 .. autoclass:: Joints
    :members:
