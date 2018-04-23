@@ -38,4 +38,4 @@ We have a mailing list located at: project@google-groups.com
 License
 -------
 
-The project is licensed under the BSD license.
+The project is licensed under the MIT license.
