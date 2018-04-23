@@ -1,5 +1,5 @@
 
-vreppy module
+VRepApi class
 ==================================
-.. automodule:: vreppy
+.. autoclass:: VRepApi
    :members:

@@ -12,6 +12,7 @@ Welcome to vreppy's documentation!
 
    usage/installation
    usage/quickstart
+   usage/vreppy
    usage/README
 
 
