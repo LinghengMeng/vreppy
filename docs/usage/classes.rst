@@ -1,5 +1,6 @@
 
 VRepApi class
 ==================================
-.. autoclass:: vreppy.VRepApi
+.. autoclass:: Joints
    :members:
+
