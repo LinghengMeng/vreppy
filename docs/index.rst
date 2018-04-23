@@ -10,6 +10,9 @@ Welcome to vreppy's documentation!
    :maxdepth: 2
    :caption: Contents:
 
+   usage/installation
+   usage/quickstart
+   usage/README
 
 
 Indices and tables
