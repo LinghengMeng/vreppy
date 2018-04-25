@@ -85,18 +85,18 @@ class Lights:
     
     def omnidirectional(self, name: str) -> OmnidirectinalLight:
         handle = self._get_object_handle(name)
-        light = AnyLight(self.id, handle, name)
+        light = AnyLight(self._id, handle, name)
         return OmnidirectinalLight(light)
     
     def spotlight(self, name: str) -> SpotLight:
         handle = self._get_object_handle(name)
-        light = AnyLight(self.id, handle, name)
+        light = AnyLight(self._id, handle, name)
         return SpotLight(light)
     
 
     def directional(self, name: str) -> DirectionalLight:
         handle = self._get_object_handle(name)
-        light = AnyLight(self.id, handle, name)
+        light = AnyLight(self._id, handle, name)
         return DirectionalLight(light)
         
     def _get_object_handle(self, name):
