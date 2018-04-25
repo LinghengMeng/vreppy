@@ -84,18 +84,18 @@ class Lights:
         self._def_op_mode = v.simx_opmode_oneshot_wait
     
     def omnidirectional(self, name: str) -> OmnidirectinalLight:
-        handle = self._get_object_handle(self, name)
+        handle = self._get_object_handle(name)
         light = AnyLight(self.id, handle, name)
         return OmnidirectinalLight(light)
     
     def spotlight(self, name: str) -> SpotLight:
-        handle = self._get_object_handle(self, name)
+        handle = self._get_object_handle(name)
         light = AnyLight(self.id, handle, name)
         return SpotLight(light)
     
 
     def directional(self, name: str) -> DirectionalLight:
-        handle = self._get_object_handle(self, name)
+        handle = self._get_object_handle(name)
         light = AnyLight(self.id, handle, name)
         return DirectionalLight(light)
         
