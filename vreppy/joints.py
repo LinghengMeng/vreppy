@@ -198,14 +198,15 @@ class Joints:
     def _get_joint_with_param(self, name, types, mode) -> AnyJoint:
         handle = self._get_object_handle(name)
         if handle is not None:
-            type, curr_mode, limit, range = self._get_info_about_joint(handle)
-            if type == types[0] or \
-               type == types[1] and \
-               curr_mode == mode:
-                return AnyJoint(self._id, handle)
-            else:
-                raise MatchObjTypeError("Joint with name: \"" + name +
-                                        "\" does not fit the parameters. ")
+#            type, curr_mode, limit, range = self._get_info_about_joint(handle)
+#            if type == types[0] or \
+#               type == types[1] and \
+#               curr_mode == mode:
+#                return AnyJoint(self._id, handle)
+#            else:
+#                raise MatchObjTypeError("Joint with name: \"" + name +
+#                                        "\" does not fit the parameters. ")
+            return AnyJoint(self._id, handle)
         else:
             raise NotFoundComponentError("Handle not found")
 
