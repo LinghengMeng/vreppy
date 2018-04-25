@@ -39,11 +39,16 @@ pip install git+https://github.com/LinghengMeng/vreppy
 In the current version is not implemented features such as remote management GUI,
 additional configuration properties of objects and shapes, etc.
 Basically implemented those components that are required to control the robot:
-* Joint
-* Proximity sensor
-* Vision sensor
-* Force sensor
-* Position sensor (used for that dummy or shape object)
+* Joints
+* Sensors
+   * Proximity sensor
+   * Vision sensor
+   * Force sensor
+   * Position sensor (used for that dummy or shape object)
+* Lights
+   * Omnidirectional light
+   * Spot light
+   * Directional light
 * ~~Remote function calls~~
 
 ## Example testallcomponent.py
