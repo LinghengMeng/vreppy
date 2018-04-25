@@ -17,7 +17,7 @@ class AnyLight:
         self._name = name
         self._def_op_mode = v.simx_opmode_oneshot_wait
         
-    def set_lihgt_state(self, state):
+    def set_light_state(self, state):
         emptyBuff = bytearray()
         res,retInts,retFloats,retStrings,retBuffer = v.simxCallScriptFunction(self._id,
                                                                        self._name,
