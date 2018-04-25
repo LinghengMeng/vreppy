@@ -18,6 +18,7 @@ class AnyLight:
         self._def_op_mode = v.simx_opmode_oneshot_wait
         
     def set_light_state(self, state):
+         # to reduce communicatation workload
 #        #if current state == target state then do nothing
 #        lightState, diffusePart, specularPart = self.get_light_state_and_color()
 #        if lightState == state:
