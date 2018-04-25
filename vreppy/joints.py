@@ -139,8 +139,8 @@ class Joints:
         """
         joint = self._get_joint_with_param(
             name,
-            [vc.sim_joint_spherical_subtype,  # bug in v-rep: return revolute, instead spherical
-             vc.sim_joint_spherical_subtype],  # bug in v-rep: return revolute, instead spherical
+            [vc.sim_joint_revolute_subtype,  # bug in v-rep: return revolute, instead spherical
+             vc.sim_joint_revolute_subtype],  # bug in v-rep: return revolute, instead spherical
             vc.sim_jointmode_passive)
         return SphericalJoint(joint)
 
