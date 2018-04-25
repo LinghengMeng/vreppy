@@ -2,6 +2,7 @@ from .vrep import vrep as v
 from .common import ReturnCommandError
 from .joints import Joints
 from .sensors import Sensors
+from .lights import Lights
 from .simulationstate import SimulationState
 
 
@@ -11,6 +12,7 @@ class VRepApi:
         self._def_op_mode = v.simx_opmode_oneshot_wait
         self.joint = Joints(id)  # type: Joints
         self.sensor = Sensors(id)  # type: Sensors
+        self.light = Lights(id)
         self.simulation = SimulationState(id)  # type: SimulationState
 
     @staticmethod
