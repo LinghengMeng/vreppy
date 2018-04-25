@@ -49,12 +49,13 @@ class AnyLight:
                                                                                v.simx_opmode_blocking)
         if res==v.simx_return_ok:
             print ('getLightStateAndColor works! ',retStrings[0]) # display the reply from V-REP (in this case, just a string)
+            lightState = retInts[0]
+            diffusePart = [retFloats[0],retFloats[1],retFloats[2]]
+            specularPart = retFloats[3],retFloats[4],retFloats[5]
+            return lightState, diffusePart, specularPart
         else:
-            print ('Remote function call failed: getLightStateAndColor')
-        lightState = retInts[0]
-        diffusePart = [retFloats[0],retFloats[1],retFloats[2]]
-        specularPart = retFloats[3],retFloats[4],retFloats[5]
-        return lightState, diffusePart, specularPart
+            NotFoundComponentError ('Remote function call failed: getLightStateAndColor of {}'.format(self._name))
+            
 
 class OmnidirectinalLight:
     def __init__(self, any_light: AnyLight):
