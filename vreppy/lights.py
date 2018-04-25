@@ -18,17 +18,22 @@ class AnyLight:
         self._def_op_mode = v.simx_opmode_oneshot_wait
         
     def set_light_state(self, state):
-        emptyBuff = bytearray()
-        res,retInts,retFloats,retStrings,retBuffer = v.simxCallScriptFunction(self._id,
-                                                                       self._name,
-                                                                       v.sim_scripttype_childscript,
-                                                                       'setLightStateAndColor',
-                                                                       [self._handle, state],[],[],emptyBuff,
-                                                                       self._def_op_mode)
-        if res==v.simx_return_ok:
-            print ('setLightStateAndColor works! ',retStrings[0]) # display the reply from V-REP (in this case, just a string)
+        #if current state == target state then do nothing
+        lightState, diffusePart, specularPart = self.get_light_state_and_color()
+        if lightState == state:
+            print("you are at what you want")    
         else:
-            print ('Remote function call failed')
+            emptyBuff = bytearray()
+            res,retInts,retFloats,retStrings,retBuffer = v.simxCallScriptFunction(self._id,
+                                                                           self._name,
+                                                                           v.sim_scripttype_childscript,
+                                                                           'setLightStateAndColor',
+                                                                           [self._handle, state],[],[],emptyBuff,
+                                                                           self._def_op_mode)
+            if res==v.simx_return_ok:
+                print ('setLightStateAndColor works! ',retStrings[0]) # display the reply from V-REP (in this case, just a string)
+            else:
+                print ('Remote function call failed')
     
 #    def set_lihgt_color(self, target):
 #        # to do
