@@ -86,6 +86,8 @@ class ReturnCommandError(Exception):
             msg = "Command caused an error on the client side"
         elif code == v.simx_return_initialize_error_flag:
             msg = "simxStart was not yet called"
+        elif code == -1:
+            msg = "Failed connecting to remote API server"
         else:
             msg = "Undefined return code: " + str(code)
         super(ReturnCommandError, self).__init__(msg)
