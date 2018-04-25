@@ -66,7 +66,16 @@ class SpotLight:
     
     def get_lihgt_state_and_color(self):
         return self._any_light.get_lihgt_state_and_color()
+     
+class DirectionalLight:
+    def __init__(self, any_light: AnyLight):
+        self._any_light = any_light
         
+    def set_light_state(self, state):
+        return self._any_light.set_light_state(state)
+    
+    def get_lihgt_state_and_color(self):
+        return self._any_light.get_lihgt_state_and_color()
 
 class Lights:
 
@@ -84,12 +93,11 @@ class Lights:
         light = AnyLight(self.id, handle, name)
         return SpotLight(light)
     
-#    def spotlight(self, name: str) -> SpotLight:
-#        # to do
-#        
-#    def directional(self, name: str) -> DirectionalLight:
-#        # todo
 
+    def directional(self, name: str) -> DirectionalLight:
+        handle = self._get_object_handle(self, name)
+        light = AnyLight(self.id, handle, name)
+        return DirectionalLight(light)
         
     def _get_object_handle(self, name):
         code, handle = v.simxGetObjectHandle(self._id, name, self._def_op_mode)
