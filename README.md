@@ -45,11 +45,13 @@ Basically implemented those components that are required to control the robot:
    * Vision sensor
    * Force sensor
    * Position sensor (used for that dummy or shape object)
-* Lights
+* Lights 
    * Omnidirectional light
    * Spot light
    * Directional light
 * ~~Remote function calls~~
+
+(**vrep** does not have Python API to contro light, so we need to add a child script (as shown in `scenes\lightControl`) for each light object and use [Remote Function Call](http://www.coppeliarobotics.com/helpFiles/en/remoteApiExtension.htm). 
 
 ## Example testallcomponent.py
 Designed to be used with `examples/testallcomponent.ttt`.
