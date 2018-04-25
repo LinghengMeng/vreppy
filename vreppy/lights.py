@@ -34,7 +34,7 @@ class AnyLight:
 #        # to do
 
 
-    def get_lihgt_state_and_color(self):
+    def get_light_state_and_color(self):
         emptyBuff = bytearray()
         res,retInts,retFloats,retStrings,retBuffer=v.simxCallScriptFunction(self._id,
                                                                                self._name,
@@ -54,7 +54,7 @@ class OmnidirectinalLight:
     def set_light_state(self, state):
         return self._any_light.set_light_state(state)
     
-    def get_lihgt_state_and_color(self):
+    def get_light_state_and_color(self):
         return self._any_light.get_lihgt_state_and_color()
         
 class SpotLight:
@@ -64,7 +64,7 @@ class SpotLight:
     def set_light_state(self, state):
         return self._any_light.set_light_state(state)
     
-    def get_lihgt_state_and_color(self):
+    def get_light_state_and_color(self):
         return self._any_light.get_lihgt_state_and_color()
      
 class DirectionalLight:
@@ -74,7 +74,7 @@ class DirectionalLight:
     def set_light_state(self, state):
         return self._any_light.set_light_state(state)
     
-    def get_lihgt_state_and_color(self):
+    def get_light_state_and_color(self):
         return self._any_light.get_lihgt_state_and_color()
 
 class Lights:
