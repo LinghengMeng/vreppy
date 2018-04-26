@@ -12,6 +12,11 @@ Install library directly from github by entering this command (If you haven't in
 ```bash
 pip install git+https://github.com/LinghengMeng/vreppy
 ```
+To update to the newest version:
+```bash
+pip uninstall vreppy
+pip install git+https://github.com/LinghengMeng/vreppy
+```
 
 ## V-Rep specific
 1. Download and install [**V-Rep**](http://www.coppeliarobotics.com/downloads.html).
