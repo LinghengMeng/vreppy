@@ -66,7 +66,7 @@ class OmnidirectinalLight:
         return self._any_light.set_light_state(state)
     
     def get_light_state_and_color(self):
-        return self._any_light.get_lihgt_state_and_color()
+        return self._any_light.get_light_state_and_color()
         
 class SpotLight:
     def __init__(self, any_light: AnyLight):
@@ -76,7 +76,7 @@ class SpotLight:
         return self._any_light.set_light_state(state)
     
     def get_light_state_and_color(self):
-        return self._any_light.get_lihgt_state_and_color()
+        return self._any_light.get_light_state_and_color()
      
 class DirectionalLight:
     def __init__(self, any_light: AnyLight):
@@ -86,7 +86,7 @@ class DirectionalLight:
         return self._any_light.set_light_state(state)
     
     def get_light_state_and_color(self):
-        return self._any_light.get_lihgt_state_and_color()
+        return self._any_light.get_light_state_and_color()
 
 class Lights:
 
