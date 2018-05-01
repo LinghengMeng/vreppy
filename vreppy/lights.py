@@ -8,7 +8,7 @@ Created on Wed Apr 25 13:08:30 2018
 
 from .vrep import vrep as v
 from .vrep import vrepConst as vc
-from .common import NotFoundComponentError, MatchObjTypeError
+from .common import NotFoundComponentError, MatchObjTypeError, RemoteFunctionCallError
 
 class AnyLight:
     def __init__(self, id, handle, name):
