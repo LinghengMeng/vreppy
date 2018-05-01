@@ -59,6 +59,10 @@ class NotFoundComponentError(Exception):
             "Not found component with name \"" + name +
             "\"")
 
+class RemoteFunctionCallError(Exception):
+    def __init__(self, name):
+        super(RemoteFunctionCallError, self).__init__(
+                "Remote function call error in \"" + name + "\".")
 
 class MatchObjTypeError(Exception):
 

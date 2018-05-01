@@ -55,7 +55,7 @@ class AnyLight:
             specularPart = retFloats[3],retFloats[4],retFloats[5]
             return lightState, diffusePart, specularPart
         else:
-            NotFoundComponentError ('Remote function call failed: getLightStateAndColor of {}'.format(self._name))
+            RemoteFunctionCallError(self._name)
             
 
 class OmnidirectinalLight:
