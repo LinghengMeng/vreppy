@@ -17,6 +17,7 @@ class VRepApi:
 
     @staticmethod
     def connect(ip, port):
+        v.simxFinish(-1) # just in case, close all opened connections
         res = v.simxStart(
             connectionAddress=ip,
             connectionPort=port,
