@@ -9,6 +9,7 @@ Created on Wed Apr 25 13:08:30 2018
 from .vrep import vrep as v
 from .vrep import vrepConst as vc
 from .common import NotFoundComponentError, MatchObjTypeError, RemoteFunctionCallError
+import warnings
 
 class AnyLight:
     def __init__(self, id, handle, name):
@@ -32,7 +33,7 @@ class AnyLight:
                                                                        [self._handle, state],[],[],emptyBuff,
                                                                        self._def_op_mode)
         if res != v.simx_return_ok:
-            RemoteFunctionCallError(self._name)
+            warnings.warn("Remote function call fail in Class AnyLight.")
             
     
 #    def set_lihgt_color(self, target):
@@ -54,7 +55,7 @@ class AnyLight:
             specularPart = retFloats[3],retFloats[4],retFloats[5]
             return lightState, diffusePart, specularPart
         else:
-            RemoteFunctionCallError(self._name)
+            warnings.warn("Remote function call fail in Class AnyLight.")
             
 
 class OmnidirectinalLight:
