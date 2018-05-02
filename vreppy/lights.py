@@ -33,7 +33,7 @@ class AnyLight:
                                                                        [self._handle, state],[],[],emptyBuff,
                                                                        self._def_op_mode)
         if res != v.simx_return_ok:
-            warnings.warn("Remote function call: \"setLightStateAndColor\" fail in Class AnyLight.")
+            warnings.warn("Remote function call: setLightStateAndColor fail in Class AnyLight.")
             
     
 #    def set_lihgt_color(self, target):
@@ -55,8 +55,8 @@ class AnyLight:
             specularPart = retFloats[3],retFloats[4],retFloats[5]
             return lightState, diffusePart, specularPart
         else:
-            return -1, [], []
-            warnings.warn("Remote function call: \"getLightStateAndColor\" fail in Class AnyLight.")
+            warnings.warn("Remote function call: getLightStateAndColor fail in Class AnyLight.")
+            return -1, [0,0,0], [0,0,0]
             
 
 class OmnidirectinalLight:
